@@ -4,12 +4,17 @@ SHELL := /bin/bash
 ########################################################################################
 # Setup Project & Dependencies                                                  	   #
 ########################################################################################
-.PHONY: clean requirements setup
+.PHONY: clean data requirements setup
 
 ## Delete all compiled Python files
 clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
+
+## Download Datasets
+data:
+	uv run scripts/download_housing.py
+	uv run scripts/download_phishing.py
 
 ## Synchronize Python Dependencies
 requirements:
@@ -18,18 +23,14 @@ requirements:
 ## Initial Setup
 setup: requirements
 	uv run -- pre-commit install
-	sudo apt install openjdk-21-jdk -y
 
 ########################################################################################
 # Tools										                                           #
 ########################################################################################
-.PHONY: notebook spark-ui
+.PHONY: notebook
 
 notebook: ## Open a Jupyter Notebook
 	uv run -- jupyter lab
-
-spark-ui: ## Show Spark
-	@echo "Spark UI: http://localhost:4040/"
 
 ########################################################################################
 # Format, Lint & Tests						                                           #
