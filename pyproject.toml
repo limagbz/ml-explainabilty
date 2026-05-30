@@ -1,21 +1,32 @@
 [project]
 name = "ml-explainabilty"
 description = "Implementation and Explanation of techniques used to explain machine learning models decisions"
-authors = [{ name = "Gabriel Lima" }]
+authors = [{ name = "Gabriel Lima", email = "limagbz@outlook.com" }]
 version = "0.1.0"
-requires-python = "~=3.14.5"
 readme = "README.md"
-dependencies = ["jupyterlab>=4.5.7", "pyspark>=4.1.1"]
 
+requires-python = "~=3.14.5"
+dependencies = [
+    "ipywidgets==8.1.8",
+    "jupyterlab==4.5.7",
+    "kagglehub==1.0.0",
+    "pandas==3.0.3",
+    "python-dotenv==1.2.2",
+    "ucimlrepo>=0.0.7",
+]
 [dependency-groups]
 dev = [
-  "pre-commit==4.6.0",
-  "pytest==9.0.3",
-  "pytest-cov==7.1.0",
-  "pytest-sugar==1.1.1",
-  "ruff==0.15.12",
-  "ty==0.0.35",
+    "pre-commit==4.6.0",
+    "pytest==9.0.3",
+    "pytest-cov==7.1.0",
+    "pytest-sugar==1.1.1",
+    "ruff==0.15.12",
+    "ty==0.0.35",
+    "openpyxl==3.1.5",
 ]
+
+[tool.uv]
+cache-dir = ".uv_cache"
 
 [tool.ty.rules]
 ignore-comment-unknown-rule = "error"
@@ -32,7 +43,7 @@ line-length = 88
 show-fixes = true
 
 [tool.ruff.lint]
-ignore = ["E501", "COM812"]
+ignore = ["E501", "COM812", "TRY400"]
 pydocstyle.convention = "google"
 select = ["ALL"]
 
@@ -50,3 +61,7 @@ addopts = ["--import-mode=importlib", "--cov", "--cov-report=term-missing"]
 
 [tool.coverage.report]
 show_missing = true
+
+[build-system]
+requires = ["uv_build>=0.11.14,<0.12.0"]
+build-backend = "uv_build"
