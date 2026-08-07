@@ -14,8 +14,10 @@ repos:
       - id: trailing-whitespace
       - id: name-tests-test
       - id: pretty-format-json
-        args: ["--indent=4", "--no-sort-keys", "--autofix"]
+        args: ["--indent=4", "--no-sort-keys"]
+        exclude: \.ipynb$
       - id: check-added-large-files
+        exclude: \.ipynb$
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.15.12
