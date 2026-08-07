@@ -1,5 +1,5 @@
 [project]
-name = "ml-explainabilty"
+name = "ml-explainability"
 description = "Implementation and Explanation of techniques used to explain machine learning models decisions"
 authors = [{ name = "Gabriel Lima", email = "limagbz@outlook.com" }]
 version = "0.1.0"
@@ -10,10 +10,14 @@ dependencies = [
     "ipywidgets==8.1.8",
     "jupyterlab==4.5.7",
     "kagglehub==1.0.0",
+    "matplotlib>=3.11.0",
     "pandas==3.0.3",
+    "pyarrow==25.0.0",
     "python-dotenv==1.2.2",
-    "ucimlrepo>=0.0.7",
+    "seaborn==0.13.2",
+    "ucimlrepo==0.0.7",
 ]
+
 [dependency-groups]
 dev = [
     "pre-commit==4.6.0",
@@ -25,8 +29,32 @@ dev = [
     "openpyxl==3.1.5",
 ]
 
-[tool.uv]
-cache-dir = ".uv_cache"
+[tool.coverage.report]
+show_missing = true
+
+[tool.pytest]
+addopts = ["--import-mode=importlib", "--cov", "--cov-report=term-missing"]
+pythonpath = ["."]
+
+[tool.ruff]
+indent-width = 4
+line-length = 88
+show-fixes = true
+
+[tool.ruff.format]
+docstring-code-format = true
+indent-style = "space"
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+ignore = ["E501", "COM812", "TRY400"]
+pydocstyle.convention = "google"
+select = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["D104"]
+"tests/**" = ["S101", "ANN", "D", "PLR2004"]
 
 [tool.ty.rules]
 ignore-comment-unknown-rule = "error"
@@ -37,31 +65,13 @@ mismatched-type-name = "error"
 redundant-cast = "error"
 unresolved-global = "error"
 
-[tool.ruff]
-indent-width = 4
-line-length = 88
-show-fixes = true
+[tool.uv]
+cache-dir = ".uv_cache"
 
-[tool.ruff.lint]
-ignore = ["E501", "COM812", "TRY400"]
-pydocstyle.convention = "google"
-select = ["ALL"]
-
-[tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["D104"]
-
-[tool.ruff.format]
-docstring-code-format = true
-indent-style = "space"
-quote-style = "double"
-skip-magic-trailing-comma = false
-
-[tool.pytest]
-addopts = ["--import-mode=importlib", "--cov", "--cov-report=term-missing"]
-
-[tool.coverage.report]
-show_missing = true
+[tool.uv.build-backend]
+module-name = "src"
+module-root = "."
 
 [build-system]
-requires = ["uv_build>=0.11.14,<0.12.0"]
+requires = ["uv_build>=0.11.0,<0.12"]
 build-backend = "uv_build"

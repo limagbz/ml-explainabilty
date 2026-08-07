@@ -42,6 +42,15 @@ refer to [_Installation_](#installation) and [_Run Locally_](#run-locally) secti
 2. Install the package and project manager: [Astral's uv](https://docs.astral.sh/uv/getting-started/installation/)
 3. Run `make setup` to install the dependencies and configure the required tools
 
+## Configuration
+
+Create a .env file with the following variables
+
+```env
+KAGGLE_API_TOKEN = "INSERT_TOKEN_HERE"
+PYTHONPATH=src
+```
+
 ## Run Locally
 
 This repository already contains the data and the models used in this project. However
