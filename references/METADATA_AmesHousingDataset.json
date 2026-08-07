@@ -1,0 +1,1425 @@
+{
+    "@context": {
+        "@language": "en",
+        "@vocab": "https://schema.org/",
+        "citeAs": "cr:citeAs",
+        "column": "cr:column",
+        "conformsTo": "dct:conformsTo",
+        "cr": "http://mlcommons.org/croissant/",
+        "data": {
+            "@id": "cr:data",
+            "@type": "@json"
+        },
+        "dataBiases": "cr:dataBiases",
+        "dataCollection": "cr:dataCollection",
+        "dataType": {
+            "@id": "cr:dataType",
+            "@type": "@vocab"
+        },
+        "dct": "http://purl.org/dc/terms/",
+        "extract": "cr:extract",
+        "field": "cr:field",
+        "fileProperty": "cr:fileProperty",
+        "fileObject": "cr:fileObject",
+        "fileSet": "cr:fileSet",
+        "format": "cr:format",
+        "includes": "cr:includes",
+        "isEnumeration": "cr:isEnumeration",
+        "isLiveDataset": "cr:isLiveDataset",
+        "jsonPath": "cr:jsonPath",
+        "key": "cr:key",
+        "md5": "cr:md5",
+        "parentField": "cr:parentField",
+        "path": "cr:path",
+        "personalSensitiveInformation": "cr:personalSensitiveInformation",
+        "recordSet": "cr:recordSet",
+        "references": "cr:references",
+        "regex": "cr:regex",
+        "repeated": "cr:repeated",
+        "replace": "cr:replace",
+        "sc": "https://schema.org/",
+        "separator": "cr:separator",
+        "source": "cr:source",
+        "subField": "cr:subField",
+        "transform": "cr:transform",
+        "wd": "https://www.wikidata.org/wiki/"
+    },
+    "alternateName": "",
+    "conformsTo": "http://mlcommons.org/croissant/1.0",
+    "license": {
+        "@type": "sc:CreativeWork",
+        "name": "Unknown"
+    },
+    "distribution": [
+        {
+            "contentUrl": "https://www.kaggle.com/api/v1/datasets/download/shashanknecrothapa/ames-housing-dataset?datasetVersionNumber=1",
+            "contentSize": "184.634 KB",
+            "md5": "iD+71nxAcR1WDiMt96qbiQ==",
+            "encodingFormat": "application/zip",
+            "@id": "archive.zip",
+            "@type": "cr:FileObject",
+            "name": "archive.zip",
+            "description": "Archive containing all the contents of the Ames Housing Dataset dataset"
+        },
+        {
+            "contentUrl": "AmesHousing.csv",
+            "containedIn": {
+                "@id": "archive.zip"
+            },
+            "encodingFormat": "text/csv",
+            "@id": "AmesHousing.csv_fileobject",
+            "@type": "cr:FileObject",
+            "name": "AmesHousing.csv"
+        }
+    ],
+    "recordSet": [
+        {
+            "field": [
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Order"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Order",
+                    "@type": "cr:Field",
+                    "name": "Order"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "PID"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/PID",
+                    "@type": "cr:Field",
+                    "name": "PID"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "MS SubClass"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/MS+SubClass",
+                    "@type": "cr:Field",
+                    "name": "MS SubClass"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "MS Zoning"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/MS+Zoning",
+                    "@type": "cr:Field",
+                    "name": "MS Zoning"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Lot Frontage"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Lot+Frontage",
+                    "@type": "cr:Field",
+                    "name": "Lot Frontage"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Lot Area"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Lot+Area",
+                    "@type": "cr:Field",
+                    "name": "Lot Area"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Street"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Street",
+                    "@type": "cr:Field",
+                    "name": "Street"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Alley"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Alley",
+                    "@type": "cr:Field",
+                    "name": "Alley"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Lot Shape"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Lot+Shape",
+                    "@type": "cr:Field",
+                    "name": "Lot Shape"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Land Contour"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Land+Contour",
+                    "@type": "cr:Field",
+                    "name": "Land Contour"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Utilities"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Utilities",
+                    "@type": "cr:Field",
+                    "name": "Utilities"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Lot Config"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Lot+Config",
+                    "@type": "cr:Field",
+                    "name": "Lot Config"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Land Slope"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Land+Slope",
+                    "@type": "cr:Field",
+                    "name": "Land Slope"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Neighborhood"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Neighborhood",
+                    "@type": "cr:Field",
+                    "name": "Neighborhood"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Condition 1"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Condition+1",
+                    "@type": "cr:Field",
+                    "name": "Condition 1"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Condition 2"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Condition+2",
+                    "@type": "cr:Field",
+                    "name": "Condition 2"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bldg Type"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bldg+Type",
+                    "@type": "cr:Field",
+                    "name": "Bldg Type"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "House Style"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/House+Style",
+                    "@type": "cr:Field",
+                    "name": "House Style"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Overall Qual"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Overall+Qual",
+                    "@type": "cr:Field",
+                    "name": "Overall Qual"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Overall Cond"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Overall+Cond",
+                    "@type": "cr:Field",
+                    "name": "Overall Cond"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Year Built"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Year+Built",
+                    "@type": "cr:Field",
+                    "name": "Year Built"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Year Remod/Add"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Year+Remod%2FAdd",
+                    "@type": "cr:Field",
+                    "name": "Year Remod/Add"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Roof Style"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Roof+Style",
+                    "@type": "cr:Field",
+                    "name": "Roof Style"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Roof Matl"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Roof+Matl",
+                    "@type": "cr:Field",
+                    "name": "Roof Matl"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Exterior 1st"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Exterior+1st",
+                    "@type": "cr:Field",
+                    "name": "Exterior 1st"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Exterior 2nd"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Exterior+2nd",
+                    "@type": "cr:Field",
+                    "name": "Exterior 2nd"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Mas Vnr Type"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Mas+Vnr+Type",
+                    "@type": "cr:Field",
+                    "name": "Mas Vnr Type"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Mas Vnr Area"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Mas+Vnr+Area",
+                    "@type": "cr:Field",
+                    "name": "Mas Vnr Area"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Exter Qual"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Exter+Qual",
+                    "@type": "cr:Field",
+                    "name": "Exter Qual"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Exter Cond"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Exter+Cond",
+                    "@type": "cr:Field",
+                    "name": "Exter Cond"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Foundation"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Foundation",
+                    "@type": "cr:Field",
+                    "name": "Foundation"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bsmt Qual"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bsmt+Qual",
+                    "@type": "cr:Field",
+                    "name": "Bsmt Qual"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bsmt Cond"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bsmt+Cond",
+                    "@type": "cr:Field",
+                    "name": "Bsmt Cond"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bsmt Exposure"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bsmt+Exposure",
+                    "@type": "cr:Field",
+                    "name": "Bsmt Exposure"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "BsmtFin Type 1"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/BsmtFin+Type+1",
+                    "@type": "cr:Field",
+                    "name": "BsmtFin Type 1"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "BsmtFin SF 1"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/BsmtFin+SF+1",
+                    "@type": "cr:Field",
+                    "name": "BsmtFin SF 1"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "BsmtFin Type 2"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/BsmtFin+Type+2",
+                    "@type": "cr:Field",
+                    "name": "BsmtFin Type 2"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "BsmtFin SF 2"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/BsmtFin+SF+2",
+                    "@type": "cr:Field",
+                    "name": "BsmtFin SF 2"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bsmt Unf SF"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bsmt+Unf+SF",
+                    "@type": "cr:Field",
+                    "name": "Bsmt Unf SF"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Total Bsmt SF"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Total+Bsmt+SF",
+                    "@type": "cr:Field",
+                    "name": "Total Bsmt SF"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Heating"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Heating",
+                    "@type": "cr:Field",
+                    "name": "Heating"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Heating QC"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Heating+QC",
+                    "@type": "cr:Field",
+                    "name": "Heating QC"
+                },
+                {
+                    "dataType": [
+                        "sc:Boolean"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Central Air"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Central+Air",
+                    "@type": "cr:Field",
+                    "name": "Central Air"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Electrical"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Electrical",
+                    "@type": "cr:Field",
+                    "name": "Electrical"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "1st Flr SF"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/1st+Flr+SF",
+                    "@type": "cr:Field",
+                    "name": "1st Flr SF"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "2nd Flr SF"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/2nd+Flr+SF",
+                    "@type": "cr:Field",
+                    "name": "2nd Flr SF"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Low Qual Fin SF"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Low+Qual+Fin+SF",
+                    "@type": "cr:Field",
+                    "name": "Low Qual Fin SF"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Gr Liv Area"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Gr+Liv+Area",
+                    "@type": "cr:Field",
+                    "name": "Gr Liv Area"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bsmt Full Bath"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bsmt+Full+Bath",
+                    "@type": "cr:Field",
+                    "name": "Bsmt Full Bath"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bsmt Half Bath"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bsmt+Half+Bath",
+                    "@type": "cr:Field",
+                    "name": "Bsmt Half Bath"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Full Bath"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Full+Bath",
+                    "@type": "cr:Field",
+                    "name": "Full Bath"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Half Bath"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Half+Bath",
+                    "@type": "cr:Field",
+                    "name": "Half Bath"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Bedroom AbvGr"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Bedroom+AbvGr",
+                    "@type": "cr:Field",
+                    "name": "Bedroom AbvGr"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Kitchen AbvGr"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Kitchen+AbvGr",
+                    "@type": "cr:Field",
+                    "name": "Kitchen AbvGr"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Kitchen Qual"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Kitchen+Qual",
+                    "@type": "cr:Field",
+                    "name": "Kitchen Qual"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "TotRms AbvGrd"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/TotRms+AbvGrd",
+                    "@type": "cr:Field",
+                    "name": "TotRms AbvGrd"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Functional"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Functional",
+                    "@type": "cr:Field",
+                    "name": "Functional"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Fireplaces"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Fireplaces",
+                    "@type": "cr:Field",
+                    "name": "Fireplaces"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Fireplace Qu"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Fireplace+Qu",
+                    "@type": "cr:Field",
+                    "name": "Fireplace Qu"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Garage Type"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Garage+Type",
+                    "@type": "cr:Field",
+                    "name": "Garage Type"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Garage Yr Blt"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Garage+Yr+Blt",
+                    "@type": "cr:Field",
+                    "name": "Garage Yr Blt"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Garage Finish"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Garage+Finish",
+                    "@type": "cr:Field",
+                    "name": "Garage Finish"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Garage Cars"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Garage+Cars",
+                    "@type": "cr:Field",
+                    "name": "Garage Cars"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Garage Area"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Garage+Area",
+                    "@type": "cr:Field",
+                    "name": "Garage Area"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Garage Qual"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Garage+Qual",
+                    "@type": "cr:Field",
+                    "name": "Garage Qual"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Garage Cond"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Garage+Cond",
+                    "@type": "cr:Field",
+                    "name": "Garage Cond"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Paved Drive"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Paved+Drive",
+                    "@type": "cr:Field",
+                    "name": "Paved Drive"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Wood Deck SF"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Wood+Deck+SF",
+                    "@type": "cr:Field",
+                    "name": "Wood Deck SF"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Open Porch SF"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Open+Porch+SF",
+                    "@type": "cr:Field",
+                    "name": "Open Porch SF"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Enclosed Porch"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Enclosed+Porch",
+                    "@type": "cr:Field",
+                    "name": "Enclosed Porch"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "3Ssn Porch"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/3Ssn+Porch",
+                    "@type": "cr:Field",
+                    "name": "3Ssn Porch"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Screen Porch"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Screen+Porch",
+                    "@type": "cr:Field",
+                    "name": "Screen Porch"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Pool Area"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Pool+Area",
+                    "@type": "cr:Field",
+                    "name": "Pool Area"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Pool QC"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Pool+QC",
+                    "@type": "cr:Field",
+                    "name": "Pool QC"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Fence"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Fence",
+                    "@type": "cr:Field",
+                    "name": "Fence"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Misc Feature"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Misc+Feature",
+                    "@type": "cr:Field",
+                    "name": "Misc Feature"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Misc Val"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Misc+Val",
+                    "@type": "cr:Field",
+                    "name": "Misc Val"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Mo Sold"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Mo+Sold",
+                    "@type": "cr:Field",
+                    "name": "Mo Sold"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Yr Sold"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Yr+Sold",
+                    "@type": "cr:Field",
+                    "name": "Yr Sold"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Sale Type"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Sale+Type",
+                    "@type": "cr:Field",
+                    "name": "Sale Type"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Sale Condition"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/Sale+Condition",
+                    "@type": "cr:Field",
+                    "name": "Sale Condition"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "AmesHousing.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "SalePrice"
+                        }
+                    },
+                    "@id": "AmesHousing.csv/SalePrice",
+                    "@type": "cr:Field",
+                    "name": "SalePrice"
+                }
+            ],
+            "@id": "AmesHousing.csv",
+            "@type": "cr:RecordSet",
+            "name": "AmesHousing.csv"
+        }
+    ],
+    "version": 1,
+    "keywords": [
+        "subject > earth and nature"
+    ],
+    "isAccessibleForFree": true,
+    "includedInDataCatalog": {
+        "@type": "sc:DataCatalog",
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com"
+    },
+    "creator": {
+        "@type": "sc:Person",
+        "name": "Sashank Thapa",
+        "url": "/shashanknecrothapa",
+        "image": "https://storage.googleapis.com/kaggle-avatars/thumbnails/14797141-kg.jpg"
+    },
+    "publisher": {
+        "@type": "sc:Organization",
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com/organizations/kaggle",
+        "image": "https://storage.googleapis.com/kaggle-organizations/4/thumbnail.png"
+    },
+    "thumbnailUrl": "https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-33.png-14797141/dataset-card.png",
+    "dateModified": "2023-06-20T17:12:11.983",
+    "datePublished": "2023-06-20T17:12:38.4823083",
+    "@type": "sc:Dataset",
+    "name": "Ames Housing Dataset",
+    "url": "https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset/versions/1",
+    "description": "The Ames Housing Dataset is a well-known dataset in the field of machine learning and data analysis. It contains various features and attributes of residential homes in Ames, Iowa, USA. The dataset is often used for regression tasks, particularly for predicting housing prices.\n\nHere are some key details about the Ames Housing Dataset:\n\n- Number of Instances: The dataset consists of 2,930 instances or observations.\n- Number of Features: There are 79 different features or variables that describe various aspects of the residential properties.\n- Target Variable: The target variable in the dataset is the SalePrice, representing the sale price of the houses.\n- Data Types: The features include both numerical and categorical variables, covering a wide range of aspects such as lot size, number of rooms, location, construction, and more.\n\nThe Ames Housing Dataset is widely used in the machine learning community for tasks such as regression modeling, feature engineering, and predictive analytics related to housing prices. It serves as a valuable resource for developing and testing machine learning algorithms and techniques in the real estate domain."
+}
